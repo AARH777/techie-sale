@@ -2,9 +2,9 @@
     --white: #FDFEFB;
     --title-text: #000000;
     --normal-text: #3F3E3A;
-    --back-input-field: #C7C7C7;
-    --text-input-field: #F7F7F7;
-    --primary-cta: #ACD9B2; /* #74C589 */
+    --dark-input: #C7C7C7;
+    --light-input: #F7F7F7;
+    --primary-cta: #74C589; /* #74C589 */
 }
 
 body {

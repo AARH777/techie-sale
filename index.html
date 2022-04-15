@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +8,392 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Techie Sale</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        :root {
+            /* Colors*/
+            --white: #FDFEFB;
+            --black: #000000;
+            /* --auxiliar-logo-text: #3F3E3A; */
+            --dark-input: #C7C7C7;
+            --light-input: #F7F7F7;
+            --primary-cta: #74C589; /* Before: #ACD9B2 */
+
+            /* Fonts */
+            --small-text: 14px;
+            --medium-text: 16px;
+            --large-text: 18px;
+
+            /* Sizes */
+            --card-size: 240px;
+            --icon-size: 36px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, var(--card-size));
+            gap: 26px;
+            place-content: center;
+        }
+
+        .product-card {
+            width: var(--card-size);
+        }
+
+        .product-card > img {
+            width: var(--card-size);
+            height: var(--card-size);
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .product-info figure {
+            margin: 0;
+        }
+
+        .product-info figure img {
+            width: var(--icon-size);
+            height: var(--icon-size);
+        }
+
+        .product-info div p:first-child {
+            font-size: var(--medium-text);
+            font-weight: bold;
+            margin-bottom: 4px;
+            margin-top: 0;
+        }
+
+        .product-info div p:last-child {
+            color: var(--very-light-gray);
+            font-size: var(--small-text);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 640px) {
+            :root {
+                --card-size: 120px;
+            }
+            .cards-container {
+                grid-template-columns: repeat(auto-fill, var(--card-size));
+            }
+
+            .product-card {
+                width: var(--card-size);
+            }
+
+            .product-card img {
+                width: var(--card-size);
+                height: var(--card-size);
+            }
+        }
+    </style>
 </head>
 <body>
+    <section class="main-container">
+        <div class="cards-container">
+            <div class="product-card">
+                <img src="./assets/pics/calavera-elegante.jpg" alt="Calavera elegante">
+                <div class="product-info">
+                    <div>
+                        <p>$240.00</p>
+                        <p>Calavera Elegante</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/mascarilla-nocturna.jpg" alt="Mascarilla nocturna">
+                <div class="product-info">
+                    <div>
+                        <p>$20.00</p>
+                        <p>Mascarilla Nocturna (gratis un aro de luz)</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/ray-neon.jpg" alt="Luz neon forma de rayo">
+                <div class="product-info">
+                    <div>
+                        <p>$70.00</p>
+                        <p>Luz Neón forma de Rayo</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/workshop-clock.jpg" alt="Reloj para taller de diseño">
+                <div class="product-info">
+                    <div>
+                        <p>$30.00</p>
+                        <p>Reloj para Taller de Diseño</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/capucha-hacker.jpg" alt="Capucha hacker">
+                <div class="product-info">
+                    <div>
+                        <p>$70.00</p>
+                        <p>Capucha Hacker</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/legobot-carro.jpg" alt="Robot de Lego tipo carro">
+                <div class="product-info">
+                    <div>
+                        <p>$175.00</p>
+                        <p>Robot de Lego tipo Carro</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/robot-humanoide.jpg" alt="Robot humanoide">
+                <div class="product-info">
+                    <div>
+                        <p>$570.00</p>
+                        <p>Robot Humanoide</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/meta-oculus.jpg" alt="Gafas AR Oculus">
+                <div class="product-info">
+                    <div>
+                        <p>$400.00</p>
+                        <p>Gafas AR Oculus</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/spark-drone.jpg" alt="Drone clase Spark">
+                <div class="product-info">
+                    <div>
+                        <p>$370.00</p>
+                        <p>Drone clase Spark</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/podcasting-microphone.jpg" alt="Micrófono de Podcast">
+                <div class="product-info">
+                    <div>
+                        <p>$240.00</p>
+                        <p>Micrófono de Podcast</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/game-boy.jpg" alt="Game Boy">
+                <div class="product-info">
+                    <div>
+                        <p>$30.00</p>
+                        <p>Nintendo Game Boy</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/maquina-arcade.jpg" alt="Máquina Arcade">
+                <div class="product-info">
+                    <div>
+                        <p>$900.00</p>
+                        <p>Máquina Arcade</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/terminal-retro.jpg" alt="Terminal Retro">
+                <div class="product-info">
+                    <div>
+                        <p>$700.00</p>
+                        <p>Terminal Retro</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/turing-machine.jpg" alt="Máquina de Turing">
+                <div class="product-info">
+                    <div>
+                        <p>$3000.00</p>
+                        <p>Máquina de Turing</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/unboxing-knife.jpg" alt="Navaja de Desembalaje (Unboxing)">
+                <div class="product-info">
+                    <div>
+                        <p>$90.00</p>
+                        <p>Navaja de Desembalaje (Unboxing)</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/prisma-triangular.jpg" alt="Prisma Triangular">
+                <div class="product-info">
+                    <div>
+                        <p>$200.00</p>
+                        <p>Prisma Triangular</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/laptop-linux.jpg" alt="Laptop Linux">
+                <div class="product-info">
+                    <div>
+                        <p>$770.00</p>
+                        <p>Laptop Linux</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/macbook-pro.jpg" alt="MacBook Pro">
+                <div class="product-info">
+                    <div>
+                        <p>$2,000.00</p>
+                        <p>MacBook Pro</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/windows-surface.jpg" alt="windows-surface">
+                <div class="product-info">
+                    <div>
+                        <p>$1,700.00</p>
+                        <p>Windows Surface</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/redragon-webcam.jpg" alt="redragon-webcam">
+                <div class="product-info">
+                    <div>
+                        <p>$200.00</p>
+                        <p>Camara Web Redragon</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/gtx1080-ti.jpg" alt="Tarjeta Gráfica GTX 1080 TI">
+                <div class="product-info">
+                    <div>
+                        <p>$900.00</p>
+                        <p>Tarjeta Gráfica GTX 1080 TI</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/headphone-cafe.jpg" alt="Auricular Metal y Marrón">
+                <div class="product-info">
+                    <div>
+                        <p>$150.00</p>
+                        <p>Auricular Metal y Marrón</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/raspberrypi-4.jpg" alt="Raspberry PI 4">
+                <div class="product-info">
+                    <div>
+                        <p>$60.00</p>
+                        <p>Raspberry PI 4</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="./assets/pics/teclado-mech.jpg" alt="Teclado Mecánico">
+                <div class="product-info">
+                    <div>
+                        <p>$200.00</p>
+                        <p>Teclado Mecánico</p>
+                    </div>
+                    <figure>
+                        <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de agregar al carrito de compras">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
