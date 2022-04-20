@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Menú PC</title>
+    <style>
+        :root {
+            /* Colors*/
+            --white: #FDFEFB;
+            --black: #000000;
+            /* --auxiliar-logo-text: #3F3E3A; */
+            --dark-input: #C7C7C7;
+            --light-input: #F7F7F7;
+            --primary-cta: #74C589; /* Before: #ACD9B2 */
+
+            /* Fonts */
+            --small-text: 14px;
+            --medium-text: 16px;
+            --large-text: 18px;
+
+            /* Sizes */
+            --card-size: 240px;
+            --icon-size: 36px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .desktop-menu {
+            width: 100px;
+            height: auto;
+            border: 2px solid var(--light-input);
+            border-radius: 8px;
+            padding: 20px 20px 0 20px;
+            box-shadow: 1px 1px 5px var(--light-input);
+        }
+
+        .desktop-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .desktop-menu ul li {
+            text-align: end;
+        }
+
+        .desktop-menu ul li a {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--black);
+        }
+
+        .desktop-menu ul li:not(:last-child) a {
+            font-weight: bold;
+        }
+
+        .desktop-menu ul li:last-child {
+            padding-top: 20px;
+            border-top: 2px solid var(--light-input);
+        }
+
+        .desktop-menu ul li:last-child a {
+            color: var(--primary-cta);
+            font-size: var(--small-text);
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-menu">
+        <ul>
+            <li><a href="/" class="title">My orders</a></li>
+            <li><a href="/">My account</a></li>
+            <li><a href="/">Sign out</a></li>
+        </ul>
+    </div>
+</body>
+</html>
