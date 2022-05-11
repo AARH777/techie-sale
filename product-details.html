@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Product details</title>
+    <style>
+        :root {
+            /* Colors*/
+            --white: #FDFEFB;
+            --black: #000000;
+            /* --auxiliar-logo-text: #3F3E3A; */
+            --dark-input: #C7C7C7;
+            --light-input: #F7F7F7;
+            --primary-cta: #74C589;
+            /* Before: #ACD9B2 */
+
+            /* Fonts */
+            --small-text: 14px;
+            --medium-text: 16px;
+            --large-text: 18px;
+
+            /* Sizes */
+            --card-size: 240px;
+            --icon-size: 36px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .product-detail {
+            width: 360px;
+            padding-bottom: 24px;
+            position: absolute;
+            right: 0;
+        }
+
+        .product-detail-close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            z-index: 2;
+            width: 16px;
+            height: 16px;
+            padding: 8px;
+            border-radius: 50%;
+            background-color: var(--white);
+            border: 1px solid var(--dark-input);
+        }
+
+        .product-detail-close:hover {
+            cursor: pointer;
+        }
+
+        .product-detail>img:nth-child(2) {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 0 0 24px 24px;
+        }
+
+        .product-info {
+            margin: 24px 24px 0;
+        }
+
+        .product-info p:nth-child(1) {
+            margin-top: 0;
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-size: var(--medium-text);
+        }
+
+        .product-info p:nth-child(2) {
+            margin-top: 0;
+            margin-bottom: 36px;
+            color: var(--dark-input);
+            font-size: var(--medium-text);
+        }
+
+        .product-info p:nth-child(3) {
+            margin-top: 0;
+            margin-bottom: 36px;
+            color: var(--dark-input);
+            font-size: var(--small-text);
+            text-align: justify;
+        }
+
+        .primary-button {
+            background-color: var(--primary-cta);
+            border: none;
+            border-radius: 8px;
+            height: 50px;
+            font-size: var(--middle-text);
+            color: var(--white);
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 12px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .add-to-cart-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .points {
+            display: flex;
+            justify-content: center;
+        }
+
+        .points li {
+            list-style: none;
+            margin-inline: 15px;
+        }
+
+        .points button {
+            background-color: var(--dark-input);
+            border-radius: 50%;
+            height: 8px;
+            padding: 1px;
+            width: 8px;
+            border: none;
+        }
+
+        .points .active {
+            border: solid 1px var(--primary-cta);
+            background-color: var(--primary-cta);
+        }
+
+        @media (max-width: 640px) {
+            .product-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="product-detail">
+        <div class="product-detail-close">
+            <img src="./assets/icons/icon-close.png" alt="Ícono de cerrar">
+        </div>
+        <img src="./assets/pics/calavera-elegante.jpg" alt="Calavera elegante">
+        <div class="points">
+            <li>
+                <button class="active"></button>
+            </li>
+            <li>
+                <button></button>
+            </li>
+            <li>
+                <button></button>
+            </li>
+        </div>
+        <div class="product-info">
+            <p>$240.00</p>
+            <p>Calavera Elegante</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi maxime debitis excepturi,
+                ullam illum ad quia tempore rem quod exercitationem repellendus veniam adipisci eum totam, doloremque
+                cumque sapiente! Doloribus!</p>
+            <button class="primary-button add-to-cart-button">
+                <img src="./assets/icons/bt-add-to-cart.svg" alt="Ícono de carrito">
+                <span>Add to cart</span>
+            </button>
+        </div>
+    </aside>
+</body>
+
+</html>
