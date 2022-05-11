@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar</title>
+    <style>
+        :root {
+            /* Colors*/
+            --white: #FDFEFB;
+            --black: #000000;
+            /* --auxiliar-logo-text: #3F3E3A; */
+            --dark-input: #C7C7C7;
+            --light-input: #F7F7F7;
+            --primary-cta: #74C589; /* Before: #ACD9B2 */
+
+            /* Fonts */
+            --small-text: 14px;
+            --medium-text: 16px;
+            --large-text: 18px;
+
+            /* Sizes */
+            --card-size: 240px;
+            --icon-size: 36px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 32px;
+            border-bottom: 1px solid var(--dark-input);
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .navbar-left {
+            display: flex;
+        }
+
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+
+        .navbar-left ul,
+        .navbar-right ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li a {
+            text-decoration: none;
+            color: var(--dark-input);
+            border: 2px solid var(--white);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .navbar-left ul li a:hover,
+        .navbar-right ul li a:hover {
+            color: var(--primary-cta);
+            border: 2px solid var(--primary-cta);
+        }
+
+        .navbar-email {
+            color: var(--dark-input);
+            font-size: var(--small-text);
+            margin-right: 12px;
+        }
+
+        .navbar-shopping-cart {
+            position: relative;
+        }
+
+        .navbar-shopping-cart div {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            font-weight: bold;
+            border-radius: 50%;
+            color: var(--black);
+            font-size: var(--small-text);
+            background-color: var(--primary-cta);
+            top: -6px;
+            right: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 640px) {
+            .menu {
+                display: block;
+            }
+
+            .navbar-left ul {
+                display: none;
+            }
+
+            .navbar-email {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+
+        <img src="./assets/icons/icon-menu.svg" alt="Menú en móviles" class="menu">
+
+        <div class="navbar-left">
+            <img src="./assets/logos/logo-techie-sale.svg" alt="Techie Sale" class="logo">
+            <ul>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Clothes</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Furniture</a></li>
+                <li><a href="#">Toys</a></li>
+                <li><a href="#">Others</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">user@mail.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./assets/icons/icon-shopping-cart.svg" alt="Shopping cart">
+                    <div>2</div>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+</body>
+</html>
